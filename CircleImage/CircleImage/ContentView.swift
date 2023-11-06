@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    var color: Color = Color.yellow
     var body: some View {
+
         Image("turtlerock")
-            .clipShape()
-            .overlay(Circle().stroke(lineWidth: 2.0))
+            .foregroundStyle(color)
+            .clipShape(Circle())
+            .overlay{
+                Circle().stroke(.red, lineWidth: 4)
+            }
+        .shadow(radius: 15)
+       
     }
 }
 
