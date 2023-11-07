@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
-//  CircleImage
+//  CircleImage.swift
+//  LandMarksApp
 //
-//  Created by 순진이 on 2023/11/02.
+//  Created by 순진이 on 2023/11/07.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct CircleImage: View {
     var color: Color = Color.yellow
     var body: some View {
 
@@ -15,14 +15,14 @@ struct ContentView: View {
             .foregroundStyle(color)
             .clipShape(Circle())
             .overlay{
-                Circle().stroke(.red, lineWidth: 4)
+                Circle().stroke(.green, lineWidth: 4)
                 
             }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CircleImage_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CircleImage()
     }
 }
