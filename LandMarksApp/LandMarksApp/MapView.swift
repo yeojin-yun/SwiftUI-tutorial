@@ -13,7 +13,7 @@ struct MapView: View {
         
         if #available(iOS 17.0, *) {
             Map(initialPosition: .region(region))
-        } 
+        }
     }
     
     private var region: MKCoordinateRegion {
