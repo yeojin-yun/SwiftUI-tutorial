@@ -19,8 +19,9 @@ struct ContentView: View {
                 Text("Turtle Rock")
                     .font(.title)
                 HStack {
+                    Rectangle()
                     Text("Joshua Tree National Park")
-                        
+                    
                     Spacer()
                     Text("California")
                 }
