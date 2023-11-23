@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CoreLocation
 
 struct LandMark: Hashable, Codable {
     var id: Int
@@ -18,5 +19,16 @@ struct LandMark: Hashable, Codable {
     private var imageName: String
     var image: Image {
         Image(imageName)
+    }
+    
+    private var coordinate: Coordinates
+    var locationCoordinate : CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: coordinate.latitute, longitude: coordinate.longtitude)
+    }
+    
+    struct Coordinates : Hashable, Codable {
+        var latitute: Double
+        var longtitude: Double
+        
     }
 }
